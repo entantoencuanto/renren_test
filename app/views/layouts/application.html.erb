@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xn="http:///www.renren.com/2009/xnml">
+  <head>
+    <%= xn_connect_javascript_tag %>
+  </head>
+  <body>
+    <%= init_xn_connect %>
+    <%= yield %>
+    <%= xn_login_button :autologoutlink => "true" %>
+    <p>
+      <% @friends.each do |f| %>
+        <%= f.inspect %>
+      <% end -%>
+    </p>
+  </body>
+</html>
